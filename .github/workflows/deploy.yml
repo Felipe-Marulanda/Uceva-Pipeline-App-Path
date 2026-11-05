@@ -33,13 +33,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Unit Tests
+      - name: Run unit tests
         run: npm test
 
       - name: Build Angular
         run: npm run build -- --base-href /Uceva-Pipeline-App-Path/
 
-      - name: Configure GitHub Pages fallback
+      - name: Create 404.html fallback
         run: cp ./dist/pipeline-app/browser/index.html ./dist/pipeline-app/browser/404.html
 
       - name: Upload artifact
