@@ -1,4 +1,28 @@
 <section>
   <h2>Acerca de</h2>
-  <p>Esta aplicación usa Path Location Strategy con Angular y GitHub Pages.</p>
+
+  <h3>Qué buscamos con este laboratorio</h3>
+  <p>
+    El objetivo era entender cómo se automatiza la construcción y el despliegue de una aplicación
+    web, y qué cambia en la configuración según la estrategia de enrutamiento que use Angular.
+  </p>
+
+  <h3>Path Location Strategy</h3>
+  <p>
+    En esta app las rutas son convencionales, por ejemplo <code>/about</code>. El problema es que
+    GitHub Pages solo entrega archivos que existen, y esa ruta no corresponde a ningún archivo.
+    Si alguien la abre directamente o recarga la página, Pages responde con un error 404.
+  </p>
+  <p>
+    Lo resolvimos copiando <code>index.html</code> como <code>404.html</code> durante el pipeline.
+    Así, cuando Pages no encuentra la ruta, entrega la aplicación y Angular muestra la vista que
+    corresponde. También tuvimos que construir con <code>--base-href</code>, porque la página vive
+    en una subruta del dominio y no en la raíz.
+  </p>
+
+  <h3>Cómo se publica</h3>
+  <p>
+    Cada push a main activa un workflow de GitHub Actions que instala las dependencias, corre las
+    pruebas, construye la aplicación, genera el <code>404.html</code> y la despliega en GitHub Pages.
+  </p>
 </section>
