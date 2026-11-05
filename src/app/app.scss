@@ -1,0 +1,53 @@
+header {
+  background: #1f3a4d;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #cfe0ea;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin: 0;
+}
